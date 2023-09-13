@@ -1,10 +1,257 @@
-Hello World!
-
-<!-- <!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="en">
-    <body style="background-color: :blue;"> 
-        <h1 Moritz Schmolke></h1>
-    </body>
-    
-</html> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+    window.onload = () => {
+
+        var colors = ['red', 'blue', 'green', 'teal', 'rosybrown', 'tan', 'plum', 'saddlebrown'];
+        var boxes = document.getElementsByClassName("person");
+        console.log(boxes);
+        console.log("hi welt");
+        for (i = 0; i < boxes.length; i++) {
+            // Pick a random color from the array 'colors'.
+            // boxes[i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            boxes[i].style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+
+            // boxes[i].style.width = '100px';
+            // boxes[i].style.height = '100px';
+            // boxes[i].style.display = 'inline-block';
+
+        };
+
+    };
+
+</script>
+
+<head>
+    <title>moritz schmolke</title>
+</head>
+<style>
+    @font-face {
+        font-family: happyTimes;
+        src: url(assets/happytimes.otf);
+    }
+
+    body {
+        margin: 1%;
+        /* font-family: happyTimes; */
+        background-color: white;
+    }
+
+    h1 {
+        margin: 0%;
+    }
+
+    h2 {
+        margin-bottom: 0.2em;
+    }
+
+    p {
+        margin-top: 0.5em;
+        margin-bottom: 0.7em;
+    }
+
+    #year {
+        color: red;
+    }
+
+    #year2 {
+        color: #d26060;
+    }
+
+    #place {
+        background-color: white;
+        color: grey;
+        text-indent: 500px;
+    }
+
+    #tools {
+        color: chocolate;
+        font-style: italic;
+    }
+
+    div.comment {
+        margin-bottom: 0em;
+        width: 95%;
+        padding-left: 1em;
+        text-overflow: ellipsis;
+        text-justify: distribute-all-lines;
+    }
+
+    div.comment2 {
+        margin-bottom: 1em;
+        padding-left: 1em;
+        width: 95%;
+        text-overflow: ellipsis;
+        text-justify: distribute-all-lines;
+    }
+
+    span.person {
+        color: white;
+        padding: 0.0em;
+        margin-top: 1em;
+        height: 2em;
+    }
+
+    #label {
+        color: darkred
+    }
+
+    #title {
+        color: black;
+    }
+
+    a {
+        color: blueviolet;
+    }
+
+    p {}
+</style>
+
+<body>
+    <h1>Moritz Schmolke</h1>
+    <p><i>*1998, Berlin&nbsp;(he/him)</i></p>
+    <div class="col">
+        <h2>Projects</h2>
+        <span id="year">03/2018</span>
+        <a id="title" href="https://deutscheoperberlin.de/en_EN/videos/6008">Der Schrei des Pfauen in der Nacht.</a>
+        <div class="comment">&#8618;Technical realisation of the interactive sound installation for the piece
+            interactive musical theatre at the Deutschen Oper
+            in Berlin</div>
+        <div class="comment2">
+            <span id=place>Deutsche Oper Berlin</span>
+            <span id="tools">Pd, Arduino, Sensors</span>
+        </div>
+
+        <span id="year">02/2020</span>
+        <a id="title"
+            href="https://www.rsh-duesseldorf.de/institute/institut-fuer-musik-und-medien/projekte/visual-music/mein-koerper-macht-das-mit-mir">
+            Mein K&ouml;rper macht das mit mir.</a>
+        <div class="comment">&#8618;Development and Integration of movement sensors for a dance-performance by Yale
+            Sevis.</div>
+        <div class="comment2">
+            <span id="place">Filmwerkstatt D&uuml;sseldorf</span>
+            <span id="tools">ESP8266, Accelerometers, SuperCollider</span>
+        </div>
+
+
+        <span id="year">09/2020</span>
+        <a id="title" href="https://www.studio-huette.com/projects/huette-x-kunsthalle-n-toggenburg/">alles
+            gleichzeitg</a>
+        <div class="comment">
+            &#8618; Solo Laptop Performance during festival "Freie Republik Bad Hemberg"
+        </div>
+        <div class="comment2">
+            <span id="place">Bad Toggenburg, Switzerland </span>
+            <span id="tools">Field-Recordings, SuperCollider</span>
+        </div>
+
+        <span id="year">02/2022</span>
+        <a id="title" href="https://luiskueffner.com/chord-skeins/">Chord Skeins</a>
+        <div class="comment">
+            &#8618; Sensor programming for 4-channel interactive audiovisual installation by Luis K&uuml;ffner
+        </div>
+        <div class="comment2">
+            <span id="place">Kunstpalast D&uuml;sseldorf</span>
+            <span id="tools">Arduino, Sensors</span>
+        </div>
+
+        <span id="year">07/2022</span>
+        <a id="title"
+            href="https://www.bundesregierung.de/breg-de/bundesregierung/bundeskanzleramt/staatsministerin-fuer-kultur-und-medien/kultur/kuenstlerfoerderung/auslandsstipendien/kuenstlerfoerderung-paris">Cit&eacute;
+            des Arts Residency</a>
+        <div class="comment">
+            &#8618; 3-month research residency at Cit&eacute; des Arts Paris granted by Kultusministerium NRW, focussed
+            research on modular
+            synthesis and the works of Elian&eacute; Radigue. <br>See <i>MatrixMixer</i>.
+        </div>
+        <div class="comment2">
+            <span id="place">Paris</span>
+            <span id="tools">Books, Laptop</span>
+        </div>
+
+        <span id="year">10/2022</span>
+        <a id="title"
+            href="https://www.bundesregierung.de/breg-de/bundesregierung/bundeskanzleramt/staatsministerin-fuer-kultur-und-medien/kultur/kuenstlerfoerderung/auslandsstipendien/kuenstlerfoerderung-paris">Cit&eacute;
+            des Arts Residency</a>
+        <div class="comment">
+            &#8618; 3-month research residency at Cit&eacute; des Arts Paris granted by Kultusministerium NRW, focussed
+            research on modular
+            synthesis and the works of Elian&eacute; Radigue. <br>See <i>MatrixMixer</i>.
+        </div>
+        <div class="comment2">
+            <span id="place">Berlin</span>
+            <span id="tools">Books, Laptop</span>
+        </div>
+
+
+        <p><span id="year">10/2022</span> Grauschleier</p>
+        <p><span id="year">03/2023</span> FM Einheit@EW</p>
+        <p><span id="year">03/2023</span> Phase 0</p>
+
+        <p><span id="year">July 2023</span> Burn Out Symposium</p>
+        <p><span id="year">July 2023</span> Am Ende die Leerstelle</p>
+
+
+
+        <h2>Discography</h2>
+        <p><span id="year2">05/2019</span> Wanubal&eacute; - Strange Heat (10"/Digital)
+            <a id="label" href="https://wanubale.bandcamp.com/album/strange-heat">Agogo records</a>
+            <br>
+            <span id="comment">&#8618;el. bass</span>
+        </p>
+        <p><span id="year2">09/2019</span> Wanubal&eacute; - phosphenes (2LP/CD/Digital)
+            <a id="label" href="https://wanubale.bandcamp.com/album/phosphenes">Agogo records</a>
+            <br>
+            <span id="comment">&#8618;el. bass</span>
+        </p>
+        <p><span id="year2">05/2020</span> Wanubal&eacute; - Nadra/Loose Focus (12"/Digital)
+            <a id="label" href="https://wanubale.bandcamp.com/album/nadra-loose-focus">Agogo records</a>
+            <br>
+            <span id="comment">&#8618;el. bass; editing</span>
+        </p>
+        <p><span id="year2">07/2022</span> POPKORNZONE - Pacifier EP (MC/Digital)
+            <a id="label" href="https://popkornzone.bandcamp.com/album/pacifier-ep">self-released</a>
+            <br>
+            <span id="comment">&#8618;recording, mix</span>
+        </p>
+        <p><span id="year2">01/2023</span> wnbl - Still not in Space (Digital)
+            <a id="label" href="https://wanubale.bandcamp.com/album/still-not-in-space">Agogo Records</a>
+            <br>
+            <span id="comment"> &#8618;el.bass, recording</span>
+        </p>
+        <p><span id="year2">03/2023</span> wnbl - Who Is She feat. EV​&icirc;​N
+            (Digital)
+            <a id="label" href="https://wanubale.bandcamp.com/album/who-is-she-feat-ev-n">Agogo Records</a>
+            <br>
+            <span id="comment"> &#8618;el.bass, recording</span>
+        </p>
+        <p><span id="year2">05/2023</span> wnbl - wnbl EP (Digital)
+            <a id="label" href="https://wanubale.bandcamp.com/album/wnbl">Agogo Records</a>
+            <br>
+            <span id="comment"> &#8618;el.bass, recording</span>
+        </p>
+        <h2>learning from and learning with</h2>
+        <span class="person">Katharina Brenner</span>
+        <span class="person">Milan D&ouml;lberg</span>
+        <span class="person">Ferdinand D&ouml;lberg</span>
+        <span class="person">Max Feig</span>
+        <span class="person">Footprint Project</span>
+        <span class="person">Jonas Heyn</span>
+        <span class="person">Bj&ouml;rn Heyn</span>
+        <span class="person">Fabian Hub</span>
+        <span class="person">Institut f&uuml;r Musik und Medien D&uuml;sseldorf</span>
+        <span class="person">Luis K&uuml;ffner</span>
+        <span class="person">E-Werk Luckenwalde</span>
+        <span class="person">Max Marcoll</span>
+        <span class="person">Julian Rohrhuber</span>
+        <span class="person">Philip Schilz</span>
+        <span class="person">Pablo Wendel</span>
+        <span class="person">wnbl</span>
+
+
+
+
+</body>
+
+</html>
