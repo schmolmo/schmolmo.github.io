@@ -1,112 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script>
-    window.onload = () => {
 
-        var colors = ['red', 'blue', 'green', 'teal', 'rosybrown', 'tan', 'plum', 'saddlebrown'];
-        var boxes = document.getElementsByClassName("person");
-        console.log(boxes);
-        console.log("hi welt");
-        for (i = 0; i < boxes.length; i++) {
-            // Pick a random color from the array 'colors'.
-            // boxes[i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            boxes[i].style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
-
-            // boxes[i].style.width = '100px';
-            // boxes[i].style.height = '100px';
-            // boxes[i].style.display = 'inline-block';
-
-        };
-
-    };
-
-</script>
 
 <head>
     <title>moritz schmolke</title>
+    <script>
+        function invertHex(hex) {
+            return (Number(`0x1${hex}`) ^ 0xFFFFFF).toString(16).substr(1).toUpperCase()
+        }
+    
+        window.onload = () => {
+    
+            var boxes = document.getElementsByClassName("person");
+            for (i = 0; i < boxes.length; i++) {
+                var color = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+                boxes[i].style.backgroundColor = color;
+            };
+    
+        };
+    
+    </script>
+    <style>
+        @font-face {
+            font-family: happyTimes;
+            src: url(assets/happytimes.otf);
+        }
+    
+        body {
+            margin: 1%;
+            /* font-family: happyTimes; */
+            background-color: white;
+        }
+    
+        h1 {
+            margin: 0%;
+        }
+    
+        h2 {
+            margin-bottom: 0.2em;
+        }
+    
+        p {
+            margin-top: 0.5em;
+            margin-bottom: 0.7em;
+        }
+    
+        #year {
+            color: red;
+        }
+    
+        #year2 {
+            color: #d26060;
+        }
+    
+        #place {
+            background-color: white;
+            color: grey;
+            text-indent: 500px;
+        }
+    
+        #tools {
+            color: chocolate;
+            font-style: italic;
+        }
+    
+        div.comment {
+            margin-bottom: 0em;
+            width: 95%;
+            padding-left: 1em;
+            text-overflow: ellipsis;
+            text-justify: distribute-all-lines;
+        }
+    
+        div.comment2 {
+            margin-bottom: 1em;
+            padding-left: 1em;
+            width: 95%;
+            text-overflow: ellipsis;
+            text-justify: distribute-all-lines;
+        }
+    
+        span.person {
+            padding: 0.0em;
+            margin-top: 1em;
+            height: 2em;
+            color:white;
+        }
+    
+        #label {
+            color: darkred
+        }
+    
+        #title {
+            color: black;
+        }
+    
+        a {
+            color: blueviolet;
+        }
+    
+        p {}
+    </style>
 </head>
-<style>
-    @font-face {
-        font-family: happyTimes;
-        src: url(assets/happytimes.otf);
-    }
 
-    body {
-        margin: 1%;
-        /* font-family: happyTimes; */
-        background-color: white;
-    }
-
-    h1 {
-        margin: 0%;
-    }
-
-    h2 {
-        margin-bottom: 0.2em;
-    }
-
-    p {
-        margin-top: 0.5em;
-        margin-bottom: 0.7em;
-    }
-
-    #year {
-        color: red;
-    }
-
-    #year2 {
-        color: #d26060;
-    }
-
-    #place {
-        background-color: white;
-        color: grey;
-        text-indent: 500px;
-    }
-
-    #tools {
-        color: chocolate;
-        font-style: italic;
-    }
-
-    div.comment {
-        margin-bottom: 0em;
-        width: 95%;
-        padding-left: 1em;
-        text-overflow: ellipsis;
-        text-justify: distribute-all-lines;
-    }
-
-    div.comment2 {
-        margin-bottom: 1em;
-        padding-left: 1em;
-        width: 95%;
-        text-overflow: ellipsis;
-        text-justify: distribute-all-lines;
-    }
-
-    span.person {
-        color: white;
-        padding: 0.0em;
-        margin-top: 1em;
-        height: 2em;
-    }
-
-    #label {
-        color: darkred
-    }
-
-    #title {
-        color: black;
-    }
-
-    a {
-        color: blueviolet;
-    }
-
-    p {}
-</style>
 
 <body>
     <h1>Moritz Schmolke</h1>
@@ -172,25 +169,57 @@
 
         <span id="year">10/2022</span>
         <a id="title"
-            href="https://www.bundesregierung.de/breg-de/bundesregierung/bundeskanzleramt/staatsministerin-fuer-kultur-und-medien/kultur/kuenstlerfoerderung/auslandsstipendien/kuenstlerfoerderung-paris">Cit&eacute;
-            des Arts Residency</a>
+            href="https://www.instagram.com/grauschleier_der_film/">Grauschleier</a>
         <div class="comment">
-            &#8618; 3-month research residency at Cit&eacute; des Arts Paris granted by Kultusministerium NRW, focussed
-            research on modular
-            synthesis and the works of Elian&eacute; Radigue. <br>See <i>MatrixMixer</i>.
+            &#8618; Sound-design and Mixing for feature-length film debut by Milan and Ferdinand D&ouml;lberg.
         </div>
         <div class="comment2">
             <span id="place">Berlin</span>
-            <span id="tools">Books, Laptop</span>
+            <span id="tools">Field recodings, DAW</span>
         </div>
 
+        <span id="year">03/2023</span>
+        <a id="title"
+            href="https://recessed.space/00098-E-WERK-Luckenwalde">High on the Wind</a>
+        <div class="comment">
+            &#8618; Technical realisation of site-specific sound installation by FM Einheit.
+        </div>
+        <div class="comment2">
+            <span id="place">E-Werk Luckenwalde</span>
+        </div>
 
-        <p><span id="year">10/2022</span> Grauschleier</p>
-        <p><span id="year">03/2023</span> FM Einheit@EW</p>
-        <p><span id="year">03/2023</span> Phase 0</p>
+        <span id="year">03/2023</span>
+        <a id="title"
+            href="https://rurbanerealitaeten.de/Stadtbad-Phase-0">Phase 0</a>
+        <div class="comment">
+            &#8618; Live-instrument making and composition for the Performance "Phase 0" in collaboration with Livni Holtz, Pablo Wendel, Paul Marwitz and Rurbane Realit&auml;ten,
+            reviving collective memories of an old public swimming pool by sonically projecting them throughout the space.
+        </div>
+        <div class="comment2">
+            <span id="place">Stadtbad Luckenwalde</span>
+            <span id="tools">8 found loudspeakers, SuperCollider, custom multi-touch interface</span>
+        </div>
 
-        <p><span id="year">July 2023</span> Burn Out Symposium</p>
-        <p><span id="year">July 2023</span> Am Ende die Leerstelle</p>
+        <span id="year">07/2023</span>
+        <a id="title"
+            href="https://www.youtube.com/watch?v=JB8fgclnr0Q">Burn Out Symposium</a>
+        <div class="comment">
+            &#8618; Planning and Production of a Weekend with talks, panels and concerts at E-Werk Luckenwalde.
+        </div>
+        <div class="comment2">
+            <span id="place">Luckenwalde</span>
+            <span id="tools">Planning, Production, Sound engineer</span>
+        </div>
+        <span id="year">07/2023</span>
+        <a id="title"
+            href="https://on.soundcloud.com/1Nfsz">Am Ende die Leerstelle</a>
+        <div class="comment">
+            &#8618; Improvised Duo-Concert together with Gabriel Rosenbach, mostly granulising and manipulating Gabriel's trumpet playing. In reference to series of paintings by Ferdinand D&ouml;lberg.
+        </div>
+        <div class="comment2">
+            <span id="place">Galerie Anton Janizweski, Berlin</span>
+            <span id="tools">SuperCollider, multi-channel sound</span>
+        </div>        
 
 
 
